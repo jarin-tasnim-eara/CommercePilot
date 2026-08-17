@@ -1,6 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Order, OrderStatus } from "@/types";
-import { loadFromStorage, saveToStorage, STORAGE_KEYS } from "@/lib/utils/persistence";
+import {
+  loadFromStorage,
+  saveToStorage,
+  STORAGE_KEYS,
+} from "@/lib/utils/persistence";
 import seedOrders from "@/data/orders.json";
 
 interface OrdersState {
@@ -17,7 +21,7 @@ const ordersSlice = createSlice({
   reducers: {
     updateOrderStatus(
       state,
-      action: PayloadAction<{ id: string; status: OrderStatus; note?: string }>
+      action: PayloadAction<{ id: string; status: OrderStatus; note?: string }>,
     ) {
       const order = state.items.find((o) => o.id === action.payload.id);
       if (!order) return;

@@ -1,6 +1,10 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { Product } from "@/types";
-import { loadFromStorage, saveToStorage, STORAGE_KEYS } from "@/lib/utils/persistence";
+import {
+  loadFromStorage,
+  saveToStorage,
+  STORAGE_KEYS,
+} from "@/lib/utils/persistence";
 
 interface DummyProduct {
   id: number;
@@ -29,7 +33,10 @@ const emptyOverrides: ProductOverrides = {
 };
 
 function getOverrides(): ProductOverrides {
-  return loadFromStorage<ProductOverrides>(STORAGE_KEYS.products, emptyOverrides);
+  return loadFromStorage<ProductOverrides>(
+    STORAGE_KEYS.products,
+    emptyOverrides,
+  );
 }
 
 function persistOverrides(overrides: ProductOverrides) {
@@ -66,12 +73,18 @@ export const productsApi = createApi({
         const overrides = getOverrides();
         const remoteProducts = response.products
           .filter((product) => !overrides.deleted.includes(product.id))
-          .map((product) => ({ ...toProduct(product), ...overrides.updated[product.id] }));
+          .map((product) => ({
+            ...toProduct(product),
+            ...overrides.updated[product.id],
+          }));
         return [...overrides.created, ...remoteProducts];
       },
       providesTags: ["Product"],
     }),
-    addProduct: builder.mutation<Product, Omit<Product, "id" | "createdAt" | "updatedAt">>({
+    addProduct: builder.mutation<
+      Product,
+      Omit<Product, "id" | "createdAt" | "updatedAt">
+    >({
       queryFn: (newProduct) => {
         const overrides = getOverrides();
         const timestamp = new Date().toISOString();
@@ -88,11 +101,16 @@ export const productsApi = createApi({
       },
       invalidatesTags: ["Product"],
     }),
-    updateProduct: builder.mutation<void, { id: number; changes: Partial<Product> }>({
+    updateProduct: builder.mutation<
+      void,
+      { id: number; changes: Partial<Product> }
+    >({
       queryFn: ({ id, changes }) => {
         const overrides = getOverrides();
         const timestamp = new Date().toISOString();
-        const createdIndex = overrides.created.findIndex((product) => product.id === id);
+        const createdIndex = overrides.created.findIndex(
+          (product) => product.id === id,
+        );
         if (createdIndex !== -1) {
           overrides.created[createdIndex] = {
             ...overrides.created[createdIndex],
@@ -100,7 +118,11 @@ export const productsApi = createApi({
             updatedAt: timestamp,
           };
         } else {
-          overrides.updated[id] = { ...overrides.updated[id], ...changes, updatedAt: timestamp };
+          overrides.updated[id] = {
+            ...overrides.updated[id],
+            ...changes,
+            updatedAt: timestamp,
+          };
         }
         persistOverrides(overrides);
         return { data: undefined };
@@ -110,7 +132,9 @@ export const productsApi = createApi({
     deleteProduct: builder.mutation<void, number>({
       queryFn: (id) => {
         const overrides = getOverrides();
-        overrides.created = overrides.created.filter((product) => product.id !== id);
+        overrides.created = overrides.created.filter(
+          (product) => product.id !== id,
+        );
         if (!overrides.deleted.includes(id)) overrides.deleted.push(id);
         persistOverrides(overrides);
         return { data: undefined };

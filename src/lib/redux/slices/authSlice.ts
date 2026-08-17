@@ -1,6 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AuthUser } from "@/types";
-import { loadFromStorage, saveToStorage, STORAGE_KEYS } from "@/lib/utils/persistence";
+import {
+  loadFromStorage,
+  saveToStorage,
+  STORAGE_KEYS,
+} from "@/lib/utils/persistence";
 
 interface AuthState {
   user: AuthUser | null;

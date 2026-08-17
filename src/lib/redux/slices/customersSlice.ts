@@ -1,6 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Customer } from "@/types";
-import { loadFromStorage, saveToStorage, STORAGE_KEYS } from "@/lib/utils/persistence";
+import {
+  loadFromStorage,
+  saveToStorage,
+  STORAGE_KEYS,
+} from "@/lib/utils/persistence";
 import seedCustomers from "@/data/customers.json";
 
 interface CustomersState {
@@ -8,7 +12,10 @@ interface CustomersState {
 }
 
 const initialState: CustomersState = {
-  items: loadFromStorage<Customer[]>(STORAGE_KEYS.customers, seedCustomers as Customer[]),
+  items: loadFromStorage<Customer[]>(
+    STORAGE_KEYS.customers,
+    seedCustomers as Customer[],
+  ),
 };
 
 const customersSlice = createSlice({
@@ -17,7 +24,7 @@ const customersSlice = createSlice({
   reducers: {
     updateCustomerStatus(
       state,
-      action: PayloadAction<{ id: string; status: Customer["status"] }>
+      action: PayloadAction<{ id: string; status: Customer["status"] }>,
     ) {
       const customer = state.items.find((c) => c.id === action.payload.id);
       if (!customer) return;

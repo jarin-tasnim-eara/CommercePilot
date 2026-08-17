@@ -4,8 +4,20 @@
     "customerId": "CUST-1001",
     "customerName": "Rafiul Islam",
     "items": [
-      { "productId": 1, "title": "Essence Mascara Lash Princess", "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png", "quantity": 2, "price": 9.99 },
-      { "productId": 5, "title": "Red Nail Polish", "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png", "quantity": 1, "price": 8.99 }
+      {
+        "productId": 1,
+        "title": "Essence Mascara Lash Princess",
+        "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png",
+        "quantity": 2,
+        "price": 9.99
+      },
+      {
+        "productId": 5,
+        "title": "Red Nail Polish",
+        "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Nail%20Polish/thumbnail.png",
+        "quantity": 1,
+        "price": 8.99
+      }
     ],
     "totalAmount": 28.97,
     "status": "delivered",
@@ -24,7 +36,13 @@
     "customerId": "CUST-1004",
     "customerName": "Farhana Yasmin",
     "items": [
-      { "productId": 12, "title": "Hyaluronic Acid Serum", "thumbnail": "https://cdn.dummyjson.com/products/images/skin-care/Hyaluronic%20Acid%20Serum/thumbnail.png", "quantity": 3, "price": 19.99 }
+      {
+        "productId": 12,
+        "title": "Hyaluronic Acid Serum",
+        "thumbnail": "https://cdn.dummyjson.com/products/images/skin-care/Hyaluronic%20Acid%20Serum/thumbnail.png",
+        "quantity": 3,
+        "price": 19.99
+      }
     ],
     "totalAmount": 59.97,
     "status": "shipped",
@@ -42,7 +60,13 @@
     "customerId": "CUST-1002",
     "customerName": "Nusrat Jahan",
     "items": [
-      { "productId": 20, "title": "Wireless Earbuds", "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Wireless%20Earbuds/thumbnail.png", "quantity": 1, "price": 45.0 }
+      {
+        "productId": 20,
+        "title": "Wireless Earbuds",
+        "thumbnail": "https://cdn.dummyjson.com/products/images/mobile-accessories/Wireless%20Earbuds/thumbnail.png",
+        "quantity": 1,
+        "price": 45.0
+      }
     ],
     "totalAmount": 45.0,
     "status": "processing",
@@ -59,7 +83,13 @@
     "customerId": "CUST-1006",
     "customerName": "Mim Akter",
     "items": [
-      { "productId": 8, "title": "Powder Canister", "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png", "quantity": 4, "price": 14.0 }
+      {
+        "productId": 8,
+        "title": "Powder Canister",
+        "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png",
+        "quantity": 4,
+        "price": 14.0
+      }
     ],
     "totalAmount": 56.0,
     "status": "pending",
@@ -75,13 +105,23 @@
     "customerId": "CUST-1008",
     "customerName": "Sadia Rahman",
     "items": [
-      { "productId": 15, "title": "Freckle Face Mask", "thumbnail": "https://cdn.dummyjson.com/products/images/skin-care/Freckle%20Face%20Mask/thumbnail.png", "quantity": 2, "price": 12.5 }
+      {
+        "productId": 15,
+        "title": "Freckle Face Mask",
+        "thumbnail": "https://cdn.dummyjson.com/products/images/skin-care/Freckle%20Face%20Mask/thumbnail.png",
+        "quantity": 2,
+        "price": 12.5
+      }
     ],
     "totalAmount": 25.0,
     "status": "cancelled",
     "timeline": [
       { "status": "pending", "timestamp": "2026-04-15T09:00:00.000Z" },
-      { "status": "cancelled", "timestamp": "2026-04-16T09:00:00.000Z", "note": "Customer requested cancellation" }
+      {
+        "status": "cancelled",
+        "timestamp": "2026-04-16T09:00:00.000Z",
+        "note": "Customer requested cancellation"
+      }
     ],
     "shippingAddress": "Boalia, Rajshahi",
     "createdAt": "2026-04-15T09:00:00.000Z",
