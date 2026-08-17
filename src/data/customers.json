@@ -1,0 +1,90 @@
+[
+  {
+    "id": "CUST-1001",
+    "name": "Rafiul Islam",
+    "email": "rafiul.islam@example.com",
+    "phone": "+880 1711-223344",
+    "address": "House 12, Road 5, Dhanmondi, Dhaka",
+    "totalOrders": 6,
+    "totalSpent": 842.5,
+    "joinedAt": "2025-11-02T09:12:00.000Z",
+    "status": "active"
+  },
+  {
+    "id": "CUST-1002",
+    "name": "Nusrat Jahan",
+    "email": "nusrat.jahan@example.com",
+    "phone": "+880 1911-556677",
+    "address": "Flat 4B, Green Road, Dhaka",
+    "totalOrders": 3,
+    "totalSpent": 310.0,
+    "joinedAt": "2025-12-14T14:30:00.000Z",
+    "status": "active"
+  },
+  {
+    "id": "CUST-1003",
+    "name": "Tanvir Ahmed",
+    "email": "tanvir.ahmed@example.com",
+    "phone": "+880 1611-889900",
+    "address": "Sector 7, Uttara, Dhaka",
+    "totalOrders": 1,
+    "totalSpent": 59.99,
+    "joinedAt": "2026-01-20T11:05:00.000Z",
+    "status": "inactive"
+  },
+  {
+    "id": "CUST-1004",
+    "name": "Farhana Yasmin",
+    "email": "farhana.yasmin@example.com",
+    "phone": "+880 1811-112233",
+    "address": "Agrabad, Chattogram",
+    "totalOrders": 9,
+    "totalSpent": 1520.75,
+    "joinedAt": "2025-09-08T08:00:00.000Z",
+    "status": "active"
+  },
+  {
+    "id": "CUST-1005",
+    "name": "Shahriar Kabir",
+    "email": "shahriar.kabir@example.com",
+    "phone": "+880 1511-334455",
+    "address": "GEC Circle, Chattogram",
+    "totalOrders": 2,
+    "totalSpent": 145.2,
+    "joinedAt": "2026-02-11T16:45:00.000Z",
+    "status": "active"
+  },
+  {
+    "id": "CUST-1006",
+    "name": "Mim Akter",
+    "email": "mim.akter@example.com",
+    "phone": "+880 1311-667788",
+    "address": "Zindabazar, Sylhet",
+    "totalOrders": 4,
+    "totalSpent": 402.4,
+    "joinedAt": "2025-10-25T10:20:00.000Z",
+    "status": "active"
+  },
+  {
+    "id": "CUST-1007",
+    "name": "Imran Hossain",
+    "email": "imran.hossain@example.com",
+    "phone": "+880 1911-990011",
+    "address": "Shahjalal Upashahar, Sylhet",
+    "totalOrders": 0,
+    "totalSpent": 0,
+    "joinedAt": "2026-03-01T12:00:00.000Z",
+    "status": "inactive"
+  },
+  {
+    "id": "CUST-1008",
+    "name": "Sadia Rahman",
+    "email": "sadia.rahman@example.com",
+    "phone": "+880 1711-445566",
+    "address": "Boalia, Rajshahi",
+    "totalOrders": 5,
+    "totalSpent": 678.3,
+    "joinedAt": "2025-08-19T09:40:00.000Z",
+    "status": "active"
+  }
+]

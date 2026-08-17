@@ -1,0 +1,34 @@
+[
+  {
+    "id": "STAFF-01",
+    "name": "Admin User",
+    "email": "admin@dashboard.test",
+    "role": "admin",
+    "status": "active",
+    "joinedAt": "2025-06-01T09:00:00.000Z"
+  },
+  {
+    "id": "STAFF-02",
+    "name": "Jarin Tasnim",
+    "email": "jarin.tasnim@dashboard.test",
+    "role": "staff",
+    "status": "active",
+    "joinedAt": "2025-07-15T09:00:00.000Z"
+  },
+  {
+    "id": "STAFF-03",
+    "name": "Rakibul Hasan",
+    "email": "rakibul.hasan@dashboard.test",
+    "role": "staff",
+    "status": "active",
+    "joinedAt": "2025-08-22T09:00:00.000Z"
+  },
+  {
+    "id": "STAFF-04",
+    "name": "Promi Sultana",
+    "email": "promi.sultana@dashboard.test",
+    "role": "staff",
+    "status": "suspended",
+    "joinedAt": "2025-09-10T09:00:00.000Z"
+  }
+]
