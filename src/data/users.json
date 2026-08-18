@@ -1,0 +1,34 @@
+[
+  {
+    "id": "user-admin-01",
+    "name": "Rezwana Karim",
+    "email": "admin@commercepilot.test",
+    "password": "admin123",
+    "role": "admin",
+    "avatarUrl": "https://picsum.photos/seed/user-admin-01/64/64"
+  },
+  {
+    "id": "user-admin-02",
+    "name": "Shafiul Alam",
+    "email": "operations@commercepilot.test",
+    "password": "admin123",
+    "role": "admin",
+    "avatarUrl": "https://picsum.photos/seed/user-admin-02/64/64"
+  },
+  {
+    "id": "user-staff-01",
+    "name": "Tasnim Jahan",
+    "email": "staff@commercepilot.test",
+    "password": "staff123",
+    "role": "staff",
+    "avatarUrl": "https://picsum.photos/seed/user-staff-01/64/64"
+  },
+  {
+    "id": "user-staff-02",
+    "name": "Mehedi Hasan",
+    "email": "support@commercepilot.test",
+    "password": "staff123",
+    "role": "staff",
+    "avatarUrl": "https://picsum.photos/seed/user-staff-02/64/64"
+  }
+]
