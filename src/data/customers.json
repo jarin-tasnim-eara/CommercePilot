@@ -1,6 +1,205 @@
 [
+
   {
-    "id": "CUST-1001",
+    "id": "cust-001",
+    "name": "Priya Talukder",
+    "email": "priya.talukder@example.com",
+    "phone": "+8801331474718",
+    "address": "House 26, Road 3, Motijheel, Rangpur",
+    "totalOrders": 2,
+    "totalSpent": 227.98,
+    "joinedAt": "2026-04-05T12:00:00Z",
+    "status": "inactive"
+  },
+  {
+    "id": "cust-002",
+    "name": "Zubair Begum",
+    "email": "zubair.begum@example.com",
+    "phone": "+8801526156977",
+    "address": "House 29, Road 5, Dhanmondi, Rajshahi",
+    "totalOrders": 1,
+    "totalSpent": 404.21,
+    "joinedAt": "2026-02-14T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-003",
+    "name": "Fahima Uddin",
+    "email": "fahima.uddin@example.com",
+    "phone": "+8801493268407",
+    "address": "House 29, Road 24, Baridhara, Mymensingh",
+    "totalOrders": 2,
+    "totalSpent": 517.15,
+    "joinedAt": "2025-03-20T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-004",
+    "name": "Sultana Rahman",
+    "email": "sultana.rahman@example.com",
+    "phone": "+8801685878034",
+    "address": "House 79, Road 18, Motijheel, Khulna",
+    "totalOrders": 2,
+    "totalSpent": 344.22,
+    "joinedAt": "2025-04-20T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-005",
+    "name": "Fahima Haque",
+    "email": "fahima.haque@example.com",
+    "phone": "+8801784355810",
+    "address": "House 52, Road 18, Mohammadpur, Narayanganj",
+    "totalOrders": 2,
+    "totalSpent": 411.28,
+    "joinedAt": "2025-12-26T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-006",
+    "name": "Nadia Ahmed",
+    "email": "nadia.ahmed@example.com",
+    "phone": "+8801422750755",
+    "address": "House 57, Road 1, Mirpur, Narayanganj",
+    "totalOrders": 1,
+    "totalSpent": 286.8,
+    "joinedAt": "2025-09-24T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-007",
+    "name": "Jannat Ahmed",
+    "email": "jannat.ahmed@example.com",
+    "phone": "+8801729756540",
+    "address": "House 77, Road 6, Uttara, Sylhet",
+    "totalOrders": 2,
+    "totalSpent": 678.97,
+    "joinedAt": "2025-09-01T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-008",
+    "name": "Zubair Alam",
+    "email": "zubair.alam@example.com",
+    "phone": "+8801482694829",
+    "address": "House 11, Road 23, Banani, Dhaka",
+    "totalOrders": 2,
+    "totalSpent": 159.47,
+    "joinedAt": "2025-12-10T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-009",
+    "name": "Sadia Ahmed",
+    "email": "sadia.ahmed@example.com",
+    "phone": "+8801561650624",
+    "address": "House 10, Road 24, Motijheel, Mymensingh",
+    "totalOrders": 1,
+    "totalSpent": 530.97,
+    "joinedAt": "2026-03-05T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-010",
+    "name": "Tania Begum",
+    "email": "tania.begum@example.com",
+    "phone": "+8801759858675",
+    "address": "House 32, Road 18, Banani, Rangpur",
+    "totalOrders": 2,
+    "totalSpent": 309.97,
+    "joinedAt": "2026-02-07T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-011",
+    "name": "Nadia Karim",
+    "email": "nadia.karim@example.com",
+    "phone": "+8801316518556",
+    "address": "House 54, Road 6, Baridhara, Rangpur",
+    "totalOrders": 1,
+    "totalSpent": 331.99,
+    "joinedAt": "2025-05-10T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-012",
+    "name": "Shakil Islam",
+    "email": "shakil.islam@example.com",
+    "phone": "+8801377747711",
+    "address": "House 52, Road 7, Badda, Dhaka",
+    "totalOrders": 1,
+    "totalSpent": 37.0,
+    "joinedAt": "2025-05-01T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-013",
+    "name": "Faisal Alam",
+    "email": "faisal.alam@example.com",
+    "phone": "+8801711018425",
+    "address": "House 33, Road 23, Dhanmondi, Narayanganj",
+    "totalOrders": 0,
+    "totalSpent": 0,
+    "joinedAt": "2025-08-10T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-014",
+    "name": "Zubair Ahmed",
+    "email": "zubair.ahmed@example.com",
+    "phone": "+8801428455361",
+    "address": "House 33, Road 2, Mohammadpur, Rangpur",
+    "totalOrders": 1,
+    "totalSpent": 462.0,
+    "joinedAt": "2026-07-01T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-015",
+    "name": "Rafiq Haque",
+    "email": "rafiq.haque@example.com",
+    "phone": "+8801461569138",
+    "address": "House 63, Road 17, Mohammadpur, Rajshahi",
+    "totalOrders": 1,
+    "totalSpent": 399.46,
+    "joinedAt": "2026-02-01T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-016",
+    "name": "Nadia Siddique",
+    "email": "nadia.siddique@example.com",
+    "phone": "+8801509621061",
+    "address": "House 70, Road 12, Motijheel, Sylhet",
+    "totalOrders": 1,
+    "totalSpent": 239.73,
+    "joinedAt": "2025-05-08T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-017",
+    "name": "Fahima Talukder",
+    "email": "fahima.talukder@example.com",
+    "phone": "+8801641020583",
+    "address": "House 55, Road 7, Banani, Barishal",
+    "totalOrders": 1,
+    "totalSpent": 37.0,
+    "joinedAt": "2026-05-24T12:00:00Z",
+    "status": "active"
+  },
+  {
+    "id": "cust-018",
+    "name": "Arif Khan",
+    "email": "arif.khan@example.com",
+    "phone": "+8801713948901",
+    "address": "House 51, Road 23, Banani, Khulna",
+    "totalOrders": 1,
+    "totalSpent": 1148.97,
+    "joinedAt": "2025-09-12T12:00:00Z",
+    "status": "inactive"
+  },
+  {
+    "id": "CUST-019",
     "name": "Rafiul Islam",
     "email": "rafiul.islam@example.com",
     "phone": "+880 1711-223344",
@@ -11,7 +210,7 @@
     "status": "active"
   },
   {
-    "id": "CUST-1002",
+    "id": "CUST-020",
     "name": "Nusrat Jahan",
     "email": "nusrat.jahan@example.com",
     "phone": "+880 1911-556677",
@@ -22,7 +221,7 @@
     "status": "active"
   },
   {
-    "id": "CUST-1003",
+    "id": "CUST-021",
     "name": "Tanvir Ahmed",
     "email": "tanvir.ahmed@example.com",
     "phone": "+880 1611-889900",
@@ -33,7 +232,7 @@
     "status": "inactive"
   },
   {
-    "id": "CUST-1004",
+    "id": "CUST-022",
     "name": "Farhana Yasmin",
     "email": "farhana.yasmin@example.com",
     "phone": "+880 1811-112233",
@@ -44,7 +243,7 @@
     "status": "active"
   },
   {
-    "id": "CUST-1005",
+    "id": "CUST-023",
     "name": "Shahriar Kabir",
     "email": "shahriar.kabir@example.com",
     "phone": "+880 1511-334455",
@@ -55,7 +254,7 @@
     "status": "active"
   },
   {
-    "id": "CUST-1006",
+    "id": "CUST-024",
     "name": "Mim Akter",
     "email": "mim.akter@example.com",
     "phone": "+880 1311-667788",
@@ -66,7 +265,7 @@
     "status": "active"
   },
   {
-    "id": "CUST-1007",
+    "id": "CUST-025",
     "name": "Imran Hossain",
     "email": "imran.hossain@example.com",
     "phone": "+880 1911-990011",
@@ -77,7 +276,7 @@
     "status": "inactive"
   },
   {
-    "id": "CUST-1008",
+    "id": "CUST-026",
     "name": "Sadia Rahman",
     "email": "sadia.rahman@example.com",
     "phone": "+880 1711-445566",
@@ -87,4 +286,5 @@
     "joinedAt": "2025-08-19T09:40:00.000Z",
     "status": "active"
   }
+  
 ]

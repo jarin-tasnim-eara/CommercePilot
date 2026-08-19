@@ -12,6 +12,8 @@ export function loadFromStorage<T>(key: string, seed: T): T {
   } catch {
     return seed;
   }
+
+ 
 }
 
 export function saveToStorage<T>(key: string, value: T): void {
@@ -25,4 +27,5 @@ export const STORAGE_KEYS = {
   customers: "ecad_customers",
   staff: "ecad_staff",
   products: "ecad_products",
+  ui:"ecad_ui",
 } as const;

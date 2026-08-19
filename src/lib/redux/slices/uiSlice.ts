@@ -1,14 +1,32 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { loadFromStorage,saveToStorage,STORAGE_KEYS,} from "@/lib/utils/persistence";
+type Theme = "light" | "dark";
 
-interface UiState {
+interface PersistedUiState {
   sidebarCollapsed: boolean;
-  theme: "light" | "dark";
+  theme: Theme;
 }
 
-const initialState: UiState = {
+interface UiState extends PersistedUiState {
+  mobileNavOpen: boolean;
+}
+
+const persisted = loadFromStorage<PersistedUiState>(STORAGE_KEYS.ui, {
   sidebarCollapsed: false,
   theme: "light",
+});
+
+const initialState: UiState = {
+  ...persisted,
+  mobileNavOpen: false,
 };
+
+function persist(state: UiState) {
+  saveToStorage<PersistedUiState>(STORAGE_KEYS.ui, {
+    sidebarCollapsed: state.sidebarCollapsed,
+    theme: state.theme,
+  });
+}
 
 const uiSlice = createSlice({
   name: "ui",
@@ -16,12 +34,29 @@ const uiSlice = createSlice({
   reducers: {
     toggleSidebar(state) {
       state.sidebarCollapsed = !state.sidebarCollapsed;
+      persist(state);
     },
-    setTheme(state, action: PayloadAction<"light" | "dark">) {
+    setTheme(state, action: PayloadAction<Theme>) {
       state.theme = action.payload;
+      persist(state);
+    },
+    openMobileNav(state) {
+      state.mobileNavOpen = true;
+    },
+    closeMobileNav(state) {
+      state.mobileNavOpen = false;
+    },
+    toggleMobileNav(state) {
+      state.mobileNavOpen = !state.mobileNavOpen;
     },
   },
 });
 
-export const { toggleSidebar, setTheme } = uiSlice.actions;
+export const {
+  toggleSidebar,
+  setTheme,
+  openMobileNav,
+  closeMobileNav,
+  toggleMobileNav,
+} = uiSlice.actions;
 export default uiSlice.reducer;

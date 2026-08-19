@@ -48,7 +48,7 @@ export default function LoginForm() {
       <Input
         label="Email"
         type="email"
-        placeholder="admin@commercepilot.test"
+        placeholder="Enter your email address"
         error={errors.email?.message}
         {...register("email")}
       />
@@ -79,11 +79,6 @@ export default function LoginForm() {
         Sign in
       </Button>
 
-      <div className="mt-2 rounded-lg bg-ink-50 px-3 py-2.5 text-xs text-ink-500">
-        <p className="font-medium text-ink-700">Demo accounts</p>
-        <p>admin@commercepilot.test / admin123</p>
-        <p>staff@commercepilot.test / staff123</p>
-      </div>
     </form>
   );
 }
