@@ -86,7 +86,7 @@ export default function RevenueChart({ orders }: RevenueChartProps) {
               />
               <Tooltip
                 formatter={(value) => [
-                  `$${Number(value ?? 0).toFixed(2)}`,
+                  `৳${Number(value ?? 0).toFixed(2)}`,
                   "Revenue",
                 ]}
                 contentStyle={{

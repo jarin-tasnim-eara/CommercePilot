@@ -59,7 +59,7 @@ export default function CategoryPieChart({ orders }: CategoryPieChartProps) {
                   </Pie>
                   <Tooltip
                     formatter={(value) => [
-                      `$${Number(value ?? 0).toFixed(2)}`,
+                      `৳${Number(value ?? 0).toFixed(2)}`,
                       "Revenue",
                     ]}
                     contentStyle={{
@@ -74,7 +74,7 @@ export default function CategoryPieChart({ orders }: CategoryPieChartProps) {
             <ul className="flex flex-1 flex-col gap-2 text-sm">
               {data.map((entry, index) => (
                 <li
-                  key={entry.category}
+                  key={`${entry.category}-${index}`}
                   className="flex items-center justify-between"
                 >
                   <span className="flex items-center gap-2 text-ink-700">
@@ -87,7 +87,7 @@ export default function CategoryPieChart({ orders }: CategoryPieChartProps) {
                     {entry.category}
                   </span>
                   <span className="font-medium text-ink-900">
-                    ${entry.revenue.toFixed(2)}
+                   ৳{entry.revenue.toFixed(2)}
                   </span>
                 </li>
               ))}
