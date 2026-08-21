@@ -1,10 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { StaffMember } from "@/types";
-import {
-  loadFromStorage,
-  saveToStorage,
-  STORAGE_KEYS,
-} from "@/lib/utils/persistence";
+import { saveToStorage, STORAGE_KEYS } from "@/lib/utils/persistence";
 import seedStaff from "@/data/staff.json";
 
 interface StaffState {
@@ -12,16 +8,16 @@ interface StaffState {
 }
 
 const initialState: StaffState = {
-  items: loadFromStorage<StaffMember[]>(
-    STORAGE_KEYS.staff,
-    seedStaff as StaffMember[],
-  ),
+  items: seedStaff as StaffMember[],
 };
 
 const staffSlice = createSlice({
   name: "staff",
   initialState,
   reducers: {
+    hydrate(state, action: PayloadAction<StaffMember[]>) {
+      state.items = action.payload;
+    },
     addStaff(state, action: PayloadAction<StaffMember>) {
       state.items.push(action.payload);
       saveToStorage(STORAGE_KEYS.staff, state.items);
@@ -38,5 +34,5 @@ const staffSlice = createSlice({
   },
 });
 
-export const { addStaff, updateStaffStatus } = staffSlice.actions;
+export const { hydrate, addStaff, updateStaffStatus } = staffSlice.actions;
 export default staffSlice.reducer;

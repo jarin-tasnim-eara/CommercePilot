@@ -1,10 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Customer } from "@/types";
-import {
-  loadFromStorage,
-  saveToStorage,
-  STORAGE_KEYS,
-} from "@/lib/utils/persistence";
+import { saveToStorage, STORAGE_KEYS } from "@/lib/utils/persistence";
 import seedCustomers from "@/data/customers.json";
 
 interface CustomersState {
@@ -12,16 +8,16 @@ interface CustomersState {
 }
 
 const initialState: CustomersState = {
-  items: loadFromStorage<Customer[]>(
-    STORAGE_KEYS.customers,
-    seedCustomers as Customer[],
-  ),
+  items: seedCustomers as Customer[],
 };
 
 const customersSlice = createSlice({
   name: "customers",
   initialState,
   reducers: {
+    hydrate(state, action: PayloadAction<Customer[]>) {
+      state.items = action.payload;
+    },
     updateCustomerStatus(
       state,
       action: PayloadAction<{ id: string; status: Customer["status"] }>,
@@ -34,5 +30,5 @@ const customersSlice = createSlice({
   },
 });
 
-export const { updateCustomerStatus } = customersSlice.actions;
+export const { hydrate, updateCustomerStatus } = customersSlice.actions;
 export default customersSlice.reducer;

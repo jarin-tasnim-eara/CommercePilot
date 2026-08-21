@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpDown, Eye, Pencil, Trash2 } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -20,6 +19,7 @@ import Badge from "@/components/ui/Badge";
 import ConfirmDialog from "@/components/ui/ConfirmDialog";
 import EmptyState from "@/components/ui/EmptyState";
 import StockBadge from "./StockBadge";
+import ProductThumbnail from "./ProductThumbnail";
 
 interface ProductTableProps {
   products: Product[];
@@ -301,12 +301,11 @@ export default function ProductTable({ products }: ProductTableProps) {
                     href={`/products/${product.id}`}
                     className="flex items-center gap-3"
                   >
-                    <Image
+                    <ProductThumbnail
                       src={product.thumbnail}
                       alt={product.title}
-                      width={36}
-                      height={36}
-                      className="h-9 w-9 shrink-0 rounded-md object-cover"
+                      size={36}
+                      className="rounded-md"
                     />
                     <span className="font-medium text-ink-900 hover:text-brand-600">
                       {product.title}

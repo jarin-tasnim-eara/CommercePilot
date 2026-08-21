@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { loadFromStorage,saveToStorage,STORAGE_KEYS,} from "@/lib/utils/persistence";
+import { saveToStorage, STORAGE_KEYS } from "@/lib/utils/persistence";
+
 type Theme = "light" | "dark";
 
 interface PersistedUiState {
@@ -11,13 +12,9 @@ interface UiState extends PersistedUiState {
   mobileNavOpen: boolean;
 }
 
-const persisted = loadFromStorage<PersistedUiState>(STORAGE_KEYS.ui, {
+const initialState: UiState = {
   sidebarCollapsed: false,
   theme: "light",
-});
-
-const initialState: UiState = {
-  ...persisted,
   mobileNavOpen: false,
 };
 
@@ -32,6 +29,10 @@ const uiSlice = createSlice({
   name: "ui",
   initialState,
   reducers: {
+    hydrate(state, action: PayloadAction<PersistedUiState>) {
+      state.sidebarCollapsed = action.payload.sidebarCollapsed;
+      state.theme = action.payload.theme;
+    },
     toggleSidebar(state) {
       state.sidebarCollapsed = !state.sidebarCollapsed;
       persist(state);
@@ -53,6 +54,7 @@ const uiSlice = createSlice({
 });
 
 export const {
+  hydrate,
   toggleSidebar,
   setTheme,
   openMobileNav,

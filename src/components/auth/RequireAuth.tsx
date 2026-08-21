@@ -7,17 +7,18 @@ import LoadingState from "@/components/ui/LoadingState";
 
 export default function RequireAuth({ children }: { children: ReactNode }) {
   const router = useRouter();
+  const hydrated = useAppSelector((state) => state.auth.hydrated);
   const isAuthenticated = useAppSelector(
     (state) => state.auth.isAuthenticated,
   );
 
   useEffect(() => {
-    if (!isAuthenticated) {
+    if (hydrated && !isAuthenticated) {
       router.replace("/login");
     }
-  }, [isAuthenticated, router]);
+  }, [hydrated, isAuthenticated, router]);
 
-  if (!isAuthenticated) {
+  if (!hydrated || !isAuthenticated) {
     return <LoadingState message="Checking your session…" />;
   }
 

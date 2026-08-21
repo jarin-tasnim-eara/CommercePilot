@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import Card, { CardHeader, CardBody } from "@/components/ui/Card";
 import Badge from "@/components/ui/Badge";
 import EmptyState from "@/components/ui/EmptyState";
+import ProductThumbnail from "@/components/products/ProductThumbnail";
 import { getLowStockProducts } from "@/lib/utils/analytics";
 import { Product } from "@/types";
 
@@ -38,12 +38,11 @@ export default function LowStockWidget({ products }: LowStockWidgetProps) {
                   href={`/products/${product.id}`}
                   className="flex items-center gap-3 py-2.5 hover:bg-ink-50"
                 >
-                  <Image
+                  <ProductThumbnail
                     src={product.thumbnail}
                     alt={product.title}
-                    width={36}
-                    height={36}
-                    className="h-9 w-9 shrink-0 rounded-md object-cover"
+                    size={36}
+                    className="rounded-md"
                   />
                   <div className="min-w-0 flex-1">
                     <p className="truncate text-sm font-medium text-ink-900">

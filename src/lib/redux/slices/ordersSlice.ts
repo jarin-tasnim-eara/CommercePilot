@@ -1,10 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Order, OrderStatus } from "@/types";
-import {
-  loadFromStorage,
-  saveToStorage,
-  STORAGE_KEYS,
-} from "@/lib/utils/persistence";
+import { saveToStorage, STORAGE_KEYS } from "@/lib/utils/persistence";
 import seedOrders from "@/data/orders.json";
 
 interface OrdersState {
@@ -12,13 +8,16 @@ interface OrdersState {
 }
 
 const initialState: OrdersState = {
-  items: loadFromStorage<Order[]>(STORAGE_KEYS.orders, seedOrders as Order[]),
+  items: seedOrders as Order[],
 };
 
 const ordersSlice = createSlice({
   name: "orders",
   initialState,
   reducers: {
+    hydrate(state, action: PayloadAction<Order[]>) {
+      state.items = action.payload;
+    },
     updateOrderStatus(
       state,
       action: PayloadAction<{ id: string; status: OrderStatus; note?: string }>,
@@ -41,5 +40,5 @@ const ordersSlice = createSlice({
   },
 });
 
-export const { updateOrderStatus, setOrders } = ordersSlice.actions;
+export const { hydrate, updateOrderStatus, setOrders } = ordersSlice.actions;
 export default ordersSlice.reducer;
