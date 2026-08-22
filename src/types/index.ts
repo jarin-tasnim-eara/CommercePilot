@@ -27,6 +27,8 @@ export interface Product {
 export type OrderStatus =
   "pending" | "processing" | "shipped" | "delivered" | "cancelled";
 
+export type PaymentStatus = "paid" | "pending" | "refunded";
+
 export interface OrderItem {
   productId: number;
   title: string;
@@ -49,6 +51,7 @@ export interface Order {
   items: OrderItem[];
   totalAmount: number;
   status: OrderStatus;
+  paymentStatus: PaymentStatus;
   timeline: OrderTimelineEntry[];
   shippingAddress: string;
   createdAt: string;
